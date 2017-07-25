@@ -2,6 +2,9 @@
 
 Retorna o código IBGE de 7 dígitos para um dado município
 
+![webp net-gifmaker](https://user-images.githubusercontent.com/7466894/28582648-914ff8a8-713c-11e7-9a43-833d2969d5a2.gif)
+
+
 ## Instale
 `composer require reginaldojunior/municipios-ibge`
 
