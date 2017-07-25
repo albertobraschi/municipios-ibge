@@ -3,7 +3,7 @@
 Retorna o código IBGE de 7 dígitos para um dado município
 
 ## Instale
-`composer require library/municipios-ibge`
+`cocomposer require reginaldojunior/municipios-ibge`
 
 ## Use
 ```PHP
