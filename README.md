@@ -3,36 +3,41 @@
 Retorna o código IBGE de 7 dígitos para um dado município
 
 ## Instale
-`npm install municipios-ibge`
+`composer require library/municipios-ibge`
 
 ## Use
-```javascript
-var ibge = require('municipios-ibge')
+```PHP
+$MunicipiosIBGE = new MunicipiosIBGE\Municipios;
 
 // Retorna '3536505'
-var codigo = ibge('São Paulo', 'Paulínia')
+$municipio = new Normalize('Paulínia');
+$estado = new Normalize('São Paulo');
+$ibge = Municipios($municipio, $estado);
+echo $ibge->getCodeIBGE();
 ```
 
 ## Normalização
-A busca não leva em conta acentos, espaços nem maiúscula/minúscula, ou seja, `ibge('sao-paulo', 'paulinia')` também funcionaria
+A busca não leva em conta acentos, espaços nem maiúscula/minúscula, ou seja, `ibge('sao-paulo', 'paulinia')` também funcionaria, sempre passe como parametro a classe normalize
 
 ## Documentação
 
-### ibge(estado, municipio)
+### MunicipiosIBGE\Municipios(MunicipiosIBGE/Normalize municipio, MunicipiosIBGE/Normalize estado)
+
+Instancia a classe
+
+`estado` é um objeto classe MunicipiosIBGE/Normalize;
+
+`municipio`  é um objeto classe MunicipiosIBGE/Normalize;
+
+### MunicipiosIBGE\Municipios(MunicipiosIBGE/Normalize municipio, MunicipiosIBGE/Normalize estado)::getCodeIBGE()
+
 Retorna o código de um dado município (string de 7 dígitos) ou string vazia se não encontrar
 
-`estado` é uma string de 2 caracteres ('RN') ou o nome do estado ('Santa Catarina').
-
-`municipio` é uma string
-
-### ibge.normalizar(str)
+### MunicipiosIBGE\Normalize(MunicipiosIBGE/Normalize estado)::getNormalizedString()
 Remove acentos, coloca tudo em caixa alta e remove outros caracteres
 
-### ibge.dados
-Dados do arquivo dados.json
+### MunicipiosIBGE\State(MunicipiosIBGE/Normalize estado)::exist()
+Verificar se o estado passado existe
 
-### ibge.estados
-Map de:
-
-* nome de estado normalizado -> sigla: `ibge.estados['SANTACATARINA'] = 'SC'`
-* sigla -> nome de estado não normalizado: `ibge.estados['SC'] = 'Santa Catarina'`
+### MunicipiosIBGE\State(MunicipiosIBGE/Normalize estado)::getCodeStateByName()
+Pega o UF do estado a partir do nome passado na instanciação da classe
