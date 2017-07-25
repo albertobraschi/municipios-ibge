@@ -54,7 +54,7 @@ class State
 	*/
 	public function exist()
 	{
-		return isset($this->states[$this->state]);
+		return isset($this->states[$this->state]) || array_search($this->state, $this->states);
 	}
 
 	/**
@@ -63,7 +63,12 @@ class State
 	*/
 	public function getCodeStateByName()
 	{
-		return $this->states[$this->state];
+		if (isset($this->states[$this->state]))
+            return $this->states[$this->state];
+
+        $key = array_search($this->state, $this->states);
+
+        return $this->states[$key];
 	}
 
 }
