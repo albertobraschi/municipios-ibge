@@ -1,5 +1,5 @@
 {
-    "name": "library/municipios-ibge",
+    "name": "reginaldojunior/municipios-ibge",
     "description": "Return data distric basead on name and state name",
     "type": "library",
     "license": "MIT",
