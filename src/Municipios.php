@@ -29,7 +29,7 @@ class Municipios extends State
         if (!parent::exist())
             return false;
 
-		$municipios = json_decode(file_get_contents('dados.json'));
+        $municipios = json_decode(file_get_contents(str_replace('/src', '', __DIR__) . '/dados.json'));
         
         $state = $this->getCodeStateByName();
 
@@ -43,7 +43,7 @@ class Municipios extends State
         if (!$this->exist())
             return false;
 
-        $municipios = json_decode(file_get_contents('dados.json'));
+        $municipios = json_decode(file_get_contents(str_replace('/src', '', __DIR__) . '/dados.json'));
         
         $state = $this->getCodeStateByName();
 
