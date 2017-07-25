@@ -1,0 +1,31 @@
+{
+    "name": "library/municipios-ibge",
+    "description": "Return data distric basead on name and state name",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Reginaldo Junior",
+            "email": "76regi@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MunicipiosIBGE\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MunicipiosIBGE\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    }
+}
