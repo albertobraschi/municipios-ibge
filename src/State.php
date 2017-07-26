@@ -8,7 +8,7 @@ namespace MunicipiosIBGE;
 class State
 {
 
-	protected $state;
+    protected $state;
 
     protected $states = [
         "ACRE" => "AC",
@@ -43,35 +43,35 @@ class State
     /**
     * @param object MunicipiosIBGE/Normalize
     */
-	function __construct(Normalize $State)
-	{
-		$this->state = $State->getNormalizedString();		
-	}
+    function __construct(Normalize $State)
+    {
+        $this->state = $State->getNormalizedString();       
+    }
 
-	/**
-	* Verify if input is state
-	* @return bool
-	*/
-	public function exist()
-	{
-		return isset($this->states[$this->state]) || array_search($this->state, $this->states);
-	}
+    /**
+    * Verify if input is state
+    * @return bool
+    */
+    public function exist()
+    {
+        return isset($this->states[$this->state]) || array_search($this->state, $this->states);
+    }
 
-	/**
-	* Get UF/code state by string normalized
-	* @return string
-	*/
-	public function getCodeStateByName()
-	{
-		if (isset($this->states[$this->state]))
+    /**
+    * Get UF/code state by string normalized
+    * @return string
+    */
+    public function getCodeStateByName()
+    {
+        if (isset($this->states[$this->state]))
             return $this->states[$this->state];
 
         $key = array_search($this->state, $this->states);
 
-        if (empty($key) || $key == 0)
+        if ((!isset($key) && empty($key)) || $key == 0)
             return false;
-
+        
         return $this->states[$key];
-	}
+    }
 
 }
