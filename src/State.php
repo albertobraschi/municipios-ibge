@@ -68,7 +68,7 @@ class State
 
         $key = array_search($this->state, $this->states);
 
-        if ((!isset($key) && empty($key)) || $key == 0)
+        if ((!isset($key) && empty($key)))
             return false;
         
         return $this->states[$key];
