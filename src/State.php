@@ -68,6 +68,9 @@ class State
 
         $key = array_search($this->state, $this->states);
 
+        if (empty($key) || $key == 0)
+            return false;
+
         return $this->states[$key];
 	}
 
