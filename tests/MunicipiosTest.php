@@ -58,7 +58,16 @@ class MunicipiosTest extends \PHPUnit_Framework_TestCase
 
 		$test = new Municipios($barueri, $sp);
 		$this->assertEquals('3505708', $test->getCodeIBGE());
+	}
 
+	public function testMarechalDeodoroCode()
+	{
+		$alagoas = new Normalize('Alagoas');
+
+		$marechaldeodoro = new Normalize('Marechal Deodoro');
+
+		$test = new Municipios($marechaldeodoro, $alagoas);
+		$this->assertEquals('2704708', $test->getCodeIBGE());
 	}
 
 }

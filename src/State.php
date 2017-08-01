@@ -12,7 +12,7 @@ class State
 
     protected $states = [
         "ACRE" => "AC",
-        "ALAGOAST" => "AL",
+        "ALAGOAS" => "AL",
         "AMAZONAS" => "AM",
         "AMAPA" => "AP",
         "BAHIA" => "BA",
