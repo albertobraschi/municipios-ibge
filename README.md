@@ -1,6 +1,6 @@
 # Municípios IBGE
 
-### v0.1.0
+### 1.0.0.0
 
 Retorna o código IBGE de 7 dígitos para um dado município
 
