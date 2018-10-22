@@ -1,12 +1,12 @@
 {
-    "name": "reginaldojunior/municipios-ibge",
+    "name": "pluggto/municipios-ibge",
     "description": "Return data distric basead on name and state name",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Reginaldo Junior",
-            "email": "76regi@gmail.com"
+            "name": "Pluggto",
+            "email": "desenvolvedor@plugg.to"
         }
     ],
     "require": {
